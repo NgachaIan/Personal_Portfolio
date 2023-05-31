@@ -101,10 +101,24 @@ You can deploy this project using: GitHub Pages,
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/SanaTameem/Awesome-Books-Project/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## ⭐️ Show your support <a name="support"></a>
 
 
 Give a ⭐️ if you like this project and how I managed to build it!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- [Microverse](https://www.microverse.org/go)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
