@@ -1,8 +1,14 @@
-/* stylelint-disable font-family-no-missing-generic-family-keyword */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 9%;
 }
 
 body {
@@ -37,7 +43,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -52,7 +58,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
