@@ -11,6 +11,7 @@
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
+  - [Install](#install)
   - [Usage](#usage)
   - [Deployment](#deployment)
 - [👤 Author](#author)
@@ -72,6 +73,14 @@ git clone https://github.com/NgachaIan/Personal_Portfolio
 
 **``you@your-Pc-name:~$ cd Personal_Portfolio``**
 
+### Install
+
+Install this project with:
+
+```sh
+  cd Personal_Portfolio
+  npm install
+```
 ### Usage
 
 To run the project, follow these instructions:
@@ -105,7 +114,7 @@ You can deploy this project using: GitHub Pages,
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/SanaTameem/Awesome-Books-Project/issues).
+Feel free to check the [issues page](https://github.com/NgachaIan/Personal_Portfolio/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
