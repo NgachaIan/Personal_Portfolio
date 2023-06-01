@@ -48,9 +48,9 @@ body {
   align-items: center;
   font-family: Inter, Arial, Helvetica, sans-serif;
   font-style: normal;
-  line-height: 52px;
+  line-height: 32px;
   text-align: center;
-  color: #172b4d;
+  color: #3a4a42;
   font-size: 24px;
   margin-top: 16px;
   font-weight: 600;
@@ -82,7 +82,7 @@ body {
   font-family: Inter, Arial, Helvetica, sans-serif;
   font-style: normal;
   text-align: center;
-  color: #172b4d;
+  color: #344563;
   font-size: 24px;
   margin-top: 16px;
   font-weight: 600;
@@ -91,21 +91,6 @@ body {
   flex: none;
   order: 0;
   flex-grow: 0;
-}
-
-.header-4 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  font-family: Inter, Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  text-align: center;
-  color: #172b4d;
-  font-size: 40px;
-  margin-top: 60px;
-  line-height: 52px;
 }
 
 .header-5 {
@@ -136,6 +121,24 @@ body {
   text-align: center;
   color: #172b4d;
   margin-top: -5px;
+}
+
+.paragraph-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #42526e;
+  margin-top: -5px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
 
 .images {
@@ -185,17 +188,21 @@ body {
   border: 1px solid #d0d9d4;
   margin: 0 auto;
   width: 327px;
-  height: 510px;
+  height: 474px;
+  border-radius: 10px;
 }
 
 .grid-item-top {
+  display: grid;
   background: #ebf0ee;
-  height: 250px;
+  height: 230px;
 }
 
 .grid-item-bottom {
+  display: grid;
   background: white;
-  height: 260px;
+  border-radius: 10px;
+  height: 244px;
 }
 
 .btn {
@@ -400,30 +407,6 @@ body {
   align-items: center;
 }
 
-.form {
-  max-width: 327px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #d0d9d4;
-  border-radius: 4px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  background: #fff;
-  box-sizing: border-box;
-}
-
 textarea {
   height: 150px;
 }
@@ -456,28 +439,6 @@ textarea {
   left: 310px;
   top: -25px;
   mix-blend-mode: normal;
-}
-
-.email {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  text-align: center;
-  margin-top: -55px;
-  color: #42526e;
-}
-
-.images-2 {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  margin-top: 20%;
-  gap: 19px;
-  align-items: center;
-  list-style-type: none;
-  padding: 0;
 }
 
 #four {
