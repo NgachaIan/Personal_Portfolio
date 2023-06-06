@@ -93,6 +93,21 @@ body {
   flex-grow: 0;
 }
 
+.header-4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  color: #172b4d;
+  font-size: 40px;
+  margin-top: 60px;
+  line-height: 52px;
+}
+
 .header-5 {
   display: flex;
   flex-wrap: wrap;
@@ -407,6 +422,30 @@ body {
   align-items: center;
 }
 
+.form {
+  max-width: 327px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
 textarea {
   height: 150px;
 }
@@ -439,6 +478,17 @@ textarea {
   left: 310px;
   top: -25px;
   mix-blend-mode: normal;
+}
+
+.email {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  margin-top: -55px;
+  color: #42526e;
 }
 
 #four {
