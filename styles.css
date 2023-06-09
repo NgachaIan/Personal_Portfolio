@@ -300,8 +300,8 @@ body {
 }
 
 @keyframes color-change {
-  from{border: none;}
-  to {border: 2px salmon;}
+  from { border: none; }
+  to { border: 2px salmon; }
 }
 
 #button {
@@ -327,6 +327,13 @@ body {
   margin-top: -10px;
   outline: none;
   border: none;
+  animation-name: color-change;
+  animation-duration: 3s;
+}
+
+@keyframes color-change {
+  from { border: none; }
+  to { border: 2px salmon; }
 }
 
 .text {
