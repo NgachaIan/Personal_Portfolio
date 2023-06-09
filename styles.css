@@ -295,6 +295,13 @@ body {
   border-radius: 4px;
   outline: none;
   border: none;
+  animation-name: color-change;
+  animation-duration: 3s;
+}
+
+@keyframes color-change {
+  from{border: none;}
+  to {border: 2px salmon;}
 }
 
 #button {
