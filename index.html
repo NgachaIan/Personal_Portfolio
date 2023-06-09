@@ -2,52 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/b08094b2a2.js" crossorigin="anonymous"></script>
     <title>Personal Portfolio</title>
 </head>
 
 <body>
-    <header class="icon">
-        <nav><i class="fas fa-bars"></i></nav>
+    <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+    <nav class="nav">
+        <ul>
+            <li>Portfolio</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
     </header>
-    <section class="section1">
-        <h1 class="header"><span>Hey there.
-                <br>I’m Alex.</span>
-            <span class="text_color">I’m a software developer</span>
+    <section>
+        <h1 class="header">Hey there. I’m Ian.
+            <h2 class="text_color">I’m a software developer</h2>
         </h1>
-        <p class="paragraph"> I can help you build a product , <br>feature or website Look through <br>some of my work
-            and
-            experience! <br>If you like
-            what you see and have <br> a project you need coded,
+        <p class="paragraph"> I can help you build a product ,feature or website Look through some of my work and <br>
+            experience! If you like what you see and have a project you need coded,
             <br>don’t hesitate to contact me.
         </p>
 
         <div>
             <ul class="images">
-                <li><a href=""><img src="img/twitter.png" alt="Twitter"></a></li>
-                <li> <a href=""><img src="img/Linkedin icon.png" alt="Linkedin"></a></li>
-                <li><a href=""> <img src="img/medium.png" alt="Medium"></a></li>
                 <li><a href=""><img src="img/github.png" alt="Github"></a></li>
+                <li> <a href=""><img src="img/Linkedin icon.png" alt="Linkedin"></a></li>
                 <li><a href=""><img src="img/angellist.png" alt="Angellist"></a></li>
+                <li><a href=""><img src="img/twitter.png" alt="Twitter"></a></li>
+                <li><a href=""> <img src="img/medium.png" alt="Medium"></a></li>
             </ul>
         </div>
-        <div class="images-1">
-            <a href=""><img src="img/Disabled.png"></a>
+        <div class="scroll">
+            <a href=""><img src="img/Disabled.png" /></a>
         </div>
+
         <div>
-            <h3 class="header-5">My Recent <br>Works</h3>
-            <a class="scroll" href=""><img src="img/Indicator.png"></a>
+            <h1 class="header-5">My Recent Works</h1>
         </div>
 
         <section class="grid-container">
             <div class="grid-item">
                 <div class="grid-item-top"></div>
                 <div class="grid-item-bottom">
-                    <h4 class="header-1">Multi-Post Stories Gain+Glory</h4>
+                    <h4 class="header-1 grid">Multi-Post Stories <br>Gain+Glory</h4>
                     <ul class="image-container">
                         <li><img src="img/ruby.png" alt="ruby"></li>
                         <li><img src="img/css.png" alt="css"></li>
@@ -60,7 +63,7 @@
             <div class="grid-item">
                 <div class="grid-item-top"></div>
                 <div class="grid-item-bottom">
-                    <h4 class="header-1">Multi-Post Stories Gain+Glory</h4>
+                    <h4 class="header-1">Multi-Post Stories <br>Gain+Glory</h4>
                     <ul class="image-container">
                         <li><img src="img/ruby.png" alt="ruby"></li>
                         <li><img src="img/css.png" alt="css"></li>
@@ -73,7 +76,7 @@
             <div class="grid-item">
                 <div class="grid-item-top"></div>
                 <div class="grid-item-bottom">
-                    <h4 class="header-1">Multi-Post Stories Gain+Glory</h4>
+                    <h4 class="header-1">Multi-Post Stories <br>Gain+Glory</h4>
                     <ul class="image-container">
                         <li><img src="img/ruby.png" alt="ruby"></li>
                         <li><img src="img/css.png" alt="css"></li>
@@ -86,7 +89,7 @@
             <div class="grid-item">
                 <div class="grid-item-top"></div>
                 <div class="grid-item-bottom">
-                    <h4 class="header-1">Multi-Post Stories Gain+Glory</h4>
+                    <h4 class="header-1">Multi-Post Stories <br>Gain+Glory</h4>
                     <ul class="image-container">
                         <li><img src="img/ruby.png" alt="ruby"></li>
                         <li><img src="img/css.png" alt="css"></li>
@@ -99,7 +102,7 @@
             <div class="grid-item">
                 <div class="grid-item-top"></div>
                 <div class="grid-item-bottom">
-                    <h4 class="header-1">Multi-Post Stories Gain+Glory</h4>
+                    <h4 class="header-1">Multi-Post Stories <br>Gain+Glory</h4>
                     <ul class="image-container">
                         <li><img src="img/ruby.png" alt="ruby"></li>
                         <li><img src="img/css.png" alt="css"></li>
@@ -112,7 +115,7 @@
             <div class="grid-item">
                 <div class="grid-item-top"></div>
                 <div class="grid-item-bottom">
-                    <h4 class="header-1">Multi-Post Stories Gain+Glory</h4>
+                    <h4 class="header-1">Multi-Post Stories <br>Gain+Glory</h4>
                     <ul class="image-container">
                         <li><img src="img/ruby.png" alt="ruby"></li>
                         <li><img src="img/css.png" alt="css"></li>
@@ -122,59 +125,99 @@
                     <button class="btn" type="button"><span class="text">See project</span></button>
                 </div>
             </div>
-            <section id="about-id">
-                <h1 class="header-2">About me</h1>
+            </div>
+        </section>
+        <section id="about-id">
+            <h1 class="header-2">About me</h1>
 
+            <p class="paragraph-1"> I can help you build a product , feature or website Look through some of my work and
+                <br>experience! If you like what you see and have a project you need coded, <br>don’t hesitate to
+                contact me.
+            </p>
+        </section>
+        <div id="button">
+            <button class="btn-1" type="button"><span class="text">Get my resume</span></button>
+        </div>
 
-                <p class="paragraph-1">I can help you build a product , <br>feature or website Look through <br>some of my work and experience! If <br>you like
-                    what you see and have a <br>project you need coded, <br> don’t hesitate to contact me.
-                </p>
-
-                <button class="btn-1" type="button"><span class="text">Get my resume</span></button>
-            </section>
+        <div class="grid-container-1">
             <div class="grid-item-1">
                 <div>
-                    <div id="one"></div>
+                    <div>
+                        <img src="img/icon-languages.png" class="one" alt="">
+                    </div>
                     <h4 class="header-3">Languages</h4>
                     <ul class="image-container-1">
-                        <li><img src="img/js.png" alt="javascript"></li>
-                        <li><img src="img/rub.png" alt="ruby"></li>
-                        <li><img src="img/ht.png" alt="html"></li>
-                        <li><img src="img/cs.png" alt="css"></li>
+                        <li>
+                            <h6 class="javascript javascript-background">Javascript</h6>
+                        </li>
+                        <li>
+                            <h6 class="ruby ruby-background">Ruby</h6>
+                        </li>
+                        <li>
+                            <h6 class="html html-background">HTML</h6>
+                        </li>
+                        <li>
+                            <h6 class="css css-background">CSS</h6>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="grid-item-1">
                 <div>
-                    <div id="two"></div>
+                    <div>
+                        <img src="img/icon-frameworks.png" class="two" alt="">
+                    </div>
                     <h4 class="header-3">Frameworks</h4>
                     <ul class="image-container-1">
-                        <li><img src="img/react.png" alt="React"></li>
-                        <li><img src="img/rails.png" alt="ruby"></li>
-                        <li><img src="img/rspec.png" alt="Rspec"></li>
-                        <li><img src="img/capy.png" alt="Capybara"></li>
-                        <li><img src="img/selenium.png" alt="Selenium"></li>
+                        <li>
+                            <h6 class="react react-background">React.js</h6>
+                        </li>
+                        <li>
+                            <h6 class="ruby-1 ruby-background-1">Ruby on Rails</h6>
+                        </li>
+                        <li>
+                            <h6 class="react react-background">RSpec</h6>
+                        </li>
+                        <li>
+                            <h6 class="react capybara-background">Capybara</h6>
+                        </li>
+
                     </ul>
                 </div>
             </div>
             <div class="grid-item-1">
                 <div>
-                    <div id="three"></div>
+                    <div>
+                        <img src="img/icon-skills.png" class="three" alt="">
+                    </div>
                     <h4 class="header-3">Skills</h4>
                     <ul class="image-container-1">
-                        <li><img src="img/database.png" alt="database"></li>
-                        <li><img src="img/git.png" alt="git"></li>
-                        <li><img src="img/cli.png" alt="cli"></li>
-                        <li><img src="img/web.png" alt="web"></li>
-                        <li><img src="img/api.png" alt="api"></li>
+                        <li>
+                            <h6 class="database database-background">Database Management</h6>
+                        </li>
+                        <li>
+                            <h6 class="database version-background">Version Control</h6>
+                        </li>
+                        <li>
+                            <h6 class="react cli-background">CLI</h6>
+                        </li>
+                        <li>
+                            <h6 class="database web-background">Web Development</h6>
+                        </li>
+                        <li>
+                            <h6 class="react api-background">API Design</h6>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div>
-                <h1 class="header-4">I'm always interested in hearing about new projects, so if you'd like to chat
+        </div>
+        <div class="grid-container-3">
+            <div class="grid-item-2">
+                <h1 class="header-4">I'm always interested in hearing<br>about new projects, so if you'd <br>like to
+                    chat
                     please get in touch.</h1>
             </div>
-            <div>
+            <div class="grid-item-2">
                 <form class="form" action="https://formspree.io/f/mqkovdwo" method="POST">
                     <div class="form-group">
                         <input class="input-text" type="text" id="first-name" name="first-name" placeholder="Full name" maxlength="30"
@@ -185,30 +228,43 @@
                             required>
                     </div>
                     <div class="form-group">
-                        <textarea class="input-message" id="connect" name="connect" maxlength="500"
+                        <textarea class="input-message" id="connect" name="connect"
                             placeholder="Hey I'd like to connect to..." required></textarea>
-                        <img class="union" src="img/Union.png">
                     </div>
                     <div class="form-group">
                         <button class="btn-2" type="button"><span class="text">Get in touch</span></button>
                     </div>
                 </form>
             </div>
-            <div>
-                <h1 class="email">ngachaian@gmail.com</h1>
+        </div>
+
+        <div>
+            <div class="grid-item-2">
+                <div class="grey-line">
+                    <ul class="images-1">
+                        <li><a href=""><img src="img/twitter.png" alt="Twitter"></a></li>
+                        <li> <a href=""><img src="img/Linkedin icon.png" alt="Linkedin"></a></li>
+                        <li><a href=""> <img src="img/medium.png" alt="Medium"></a></li>
+                        <li><a href=""><img src="img/github.png" alt="Github"></a></li>
+                        <li><a href=""><img src="img/angellist.png" alt="Angellist"></a></li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+          
+        <div class="grid-container">
+            <div id="four">
+                <img src="img/contact form-illustratoin-3-desktop.png" alt="">
             </div>
-            <div>
-                <ul class="images">
-                    <li><a href=""><img src="img/twitter.png" alt="Twitter"></a></li>
-                    <li> <a href=""><img src="img/Linkedin icon.png" alt="Linkedin"></a></li>
-                    <li><a href=""> <img src="img/medium.png" alt="Medium"></a></li>
-                    <li><a href=""><img src="img/github.png" alt="Github"></a></li>
-                    <li><a href=""><img src="img/angellist.png" alt="Angellist"></a></li>
-                </ul>
+            <div id="five">
+                <img src="img/illustration-1-contact-form-desktop.png" alt="">
             </div>
-            <div id="four"></div>
-        </section>
+            <div id="six">
+                <img src="img/illustration-2-contact-form-desktop.png" alt="">
+            </div>
+        </div>
     </section>
+    </div>
 </body>
 
 </html>
