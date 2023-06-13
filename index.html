@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,16 +9,15 @@
     <script src="https://kit.fontawesome.com/b08094b2a2.js" crossorigin="anonymous"></script>
     <title>Personal Portfolio</title>
 </head>
+
 <body>
-    <header>
-        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
-        <nav class="nav">
-            <ul>
-                <li>Portfolio</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+    <nav class="nav">
+        <ul>
+            <li>Portfolio</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
     </header>
     <section>
         <h1 class="header">Hey there. I’m Ian.
@@ -49,7 +49,7 @@
             <div class="grid-item">
                 <div class="grid-item-top"></div>
                 <div class="grid-item-bottom">
-                    <h4 class="header-1 grid">Multi-Post Stories <br>Gain+Glory</h4>
+                    <h4 class="header-1">Multi-Post Stories <br>Gain+Glory</h4>
                     <ul class="image-container">
                         <li><img src="img/ruby.png" alt="ruby"></li>
                         <li><img src="img/css.png" alt="css"></li>
@@ -138,12 +138,12 @@
             <button class="btn-1" type="button"><span class="text">Get my resume</span></button>
         </div>
 
+        <div class="image-group"></div>
+        <div class="image-group-1"></div>
         <div class="grid-container-1">
             <div class="grid-item-1">
                 <div>
-                    <div>
-                        <img src="img/icon-languages.png" class="one" alt="">
-                    </div>
+                    <div id="one"></div>
                     <h4 class="header-3">Languages</h4>
                     <ul class="image-container-1">
                         <li>
@@ -163,9 +163,7 @@
             </div>
             <div class="grid-item-1">
                 <div>
-                    <div>
-                        <img src="img/icon-frameworks.png" class="two" alt="">
-                    </div>
+                    <div id="two"></div>
                     <h4 class="header-3">Frameworks</h4>
                     <ul class="image-container-1">
                         <li>
@@ -186,9 +184,7 @@
             </div>
             <div class="grid-item-1">
                 <div>
-                    <div>
-                        <img src="img/icon-skills.png" class="three" alt="">
-                    </div>
+                    <div id="three"></div>
                     <h4 class="header-3">Skills</h4>
                     <ul class="image-container-1">
                         <li>
@@ -217,10 +213,10 @@
                     please get in touch.</h1>
             </div>
             <div class="grid-item-2">
-                <form class="form" action="https://formspree.io/f/mqkovdwo" method="POST">
+                <form class="form">
                     <div class="form-group">
                         <input class="input-text" type="text" id="first-name" name="first-name" placeholder="Full name"
-                            maxlength="30" required>
+                            required>
                     </div>
                     <div class="form-group">
                         <input class="input-text" type="email" id="email" name="email" placeholder="Email address"
@@ -228,7 +224,7 @@
                     </div>
                     <div class="form-group">
                         <textarea class="input-message" id="connect" name="connect"
-                            placeholder="Hey I'd like to connect to..." required></textarea>
+                            placeholder="Hey I'd like to connect to..."></textarea>
                     </div>
                     <div class="form-group">
                         <button class="btn-2" type="button"><span class="text">Get in touch</span></button>
@@ -237,33 +233,22 @@
             </div>
         </div>
 
-        <div>
-            <div class="grid-item-2">
-                <div class="grey-line">
-                    <ul class="images-1">
-                        <li><a href=""><img src="img/twitter.png" alt="Twitter"></a></li>
-                        <li> <a href=""><img src="img/Linkedin icon.png" alt="Linkedin"></a></li>
-                        <li><a href=""> <img src="img/medium.png" alt="Medium"></a></li>
-                        <li><a href=""><img src="img/github.png" alt="Github"></a></li>
-                        <li><a href=""><img src="img/angellist.png" alt="Angellist"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <div class="grid-container-4">
-            <div id="four">
-                <img src="img/contact form-illustratoin-3-desktop.png" alt="">
-            </div>
-            <div id="five">
-                <img src="img/illustration-1-contact-form-desktop.png" alt="">
-            </div>
-            <div id="six">
-                <img src="img/illustration-2-contact-form-desktop.png" alt="">
-            </div>
+        <div class="grid-item-2">
+            <ul class="images-1">
+                <li><a href=""><img src="img/twitter.png" alt="Twitter"></a></li>
+                <li> <a href=""><img src="img/Linkedin icon.png" alt="Linkedin"></a></li>
+                <li><a href=""> <img src="img/medium.png" alt="Medium"></a></li>
+                <li><a href=""><img src="img/github.png" alt="Github"></a></li>
+                <li><a href=""><img src="img/angellist.png" alt="Angellist"></a></li>
+            </ul>
+        </div>
+        <div class="grid-container">
+            <div id="four"></div>
+            <div id="five"></div>
+            <div id="six"></div>
         </div>
     </section>
     </div>
 </body>
-
 </html>
