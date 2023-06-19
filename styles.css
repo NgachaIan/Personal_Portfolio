@@ -77,7 +77,7 @@ button:active {
   width: 100%;
   align-items: center;
   padding: 45px;
-  background-image: url("/Images/header_illustration.png");
+  background-image: url("Images/header_illustration.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 55% 0%;
