@@ -12,11 +12,11 @@
         <div class="hamburger-menu" onclick="toggleMobileMenu()">
         </div>
         <nav class="mobile-menu" id="mobileMenu">
-          <ul>
-            <li>Contact</li>
-            <li>About</li>
-            <li>Portfolio</li>
-          </ul>
+            <ul>
+                <li onclick="scrollToSection('#contact')">Contact</li>
+                <li onclick="scrollToSection('#about')">About</li>
+                <li onclick="scrollToSection('#portfolio')">Portfolio</li>
+              </ul>
           <div class="close-icon" onclick="toggleMobileMenu()"></div>
         </nav>
       </header>
@@ -53,7 +53,7 @@
     </div>
     <section>
     <div class="box">
-        <section class="works">
+        <section class="works" id="portfolio">
             <h2>My Recent Works</h2> 
         </section>
         <div class="background">
@@ -179,7 +179,7 @@
     </div>
     </section>
     <div class="a-container">
-        <section class="about">
+        <section class="about" id="about">
             <h2> 
                 About me 
             </h2>
@@ -231,7 +231,7 @@
         </section>
     </div>
     <div class="form-container">
-        <section class="touch">
+        <section class="touch" id="contact">
             <h2> 
                 I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
             </h2>
