@@ -68,6 +68,8 @@ button:active {
   justify-content: right;
   padding: 40px;
   background: url("Images/app_bar.png") 90% no-repeat;
+  position: relative;
+  transition: padding-top 0.3s ease;
 }
 
 .container {
@@ -513,6 +515,185 @@ textarea {
     margin-top: 31px;
     margin-left: 0;
   }
+
+  .mobile-menu {
+    display: none; /* Initially hide the mobile menu */
+  }
+
+  .mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    right: 0;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .mobile-menu ul li {
+    margin-bottom: -50px;
+  }
+  /* Styles for the hamburger menu icon */
+  .hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Styles for the close (X) icon */
+  .close-icon {
+    display: none; /* Initially hide the close icon */
+    margin-bottom: -40px;
+  }
+  
+  .close-icon::before, .close-icon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: #333;
+  }
+  
+  .close-icon::before {
+    transform: rotate(45deg);
+  }
+  
+  .close-icon::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    background-image: url('Images/header-illsutration-mobile.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .text {
+    flex-direction: column;
+  }
+
+  .head h1 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 48px;
+    color: #172b4d;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    padding: 45px;
+    margin-top: 20px;
+    background: url("Images/contact-mobile.png") 100% 92% no-repeat;
+    background-size: 20%;
+  }
+
+  .touch {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .touch h2 {
+    color: #172b4d;
+    font-size: 2.3em;
+  }
+
+  .connect {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 24px;
+    margin-left: 0;
+  }
+
+  .mail {
+    display: flex;
+    font-size: 0.9em;
+    color: #42526e;
+    margin-top: 31px;
+    margin-left: 0;
+  }
+
+  .mobile-menu {
+    display: none; /* Initially hide the mobile menu */
+  }
+
+  .mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    right: 0;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .mobile-menu ul li {
+    margin-bottom: -50px;
+  }
+  /* Styles for the hamburger menu icon */
+  .hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Styles for the close (X) icon */
+  .close-icon {
+    display: none; /* Initially hide the close icon */
+    margin-bottom: -40px;
+  }
+  
+  .close-icon::before, .close-icon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: #333;
+  }
+  
+  .close-icon::before {
+    transform: rotate(45deg);
+  }
+  
+  .close-icon::after {
+    transform: rotate(-45deg);
+  }
+
 }
 
 @media (min-width: 768px) {
