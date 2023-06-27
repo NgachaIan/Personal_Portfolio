@@ -14,6 +14,11 @@ function toggleMobileMenu() {
       menu.style.display = 'block';
       hamburgerMenu.style.display = 'none';
       closeIcon.style.display = 'block';
-      header.style.paddingTop = '80px'; // Adjust the value as needed
+      header.style.paddingTop = '80px'; 
     }
+  }
+
+  function scrollToSection(sectionId) {
+    var section = document.querySelector(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
   }
