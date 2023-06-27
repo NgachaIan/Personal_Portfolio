@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="styles.css">
 </head> 
 <body>
-    <header class="bar-container">
-        <nav>
+    <header class="bar-container" id="header">
+        <div class="hamburger-menu" onclick="toggleMobileMenu()">
+        </div>
+        <nav class="mobile-menu" id="mobileMenu">
+          <ul>
+            <li>Contact</li>
+            <li>About</li>
+            <li>Portfolio</li>
+          </ul>
+          <div class="close-icon" onclick="toggleMobileMenu()"></div>
         </nav>
-   </header>
+      </header>
    <div class="container">
         <section class="menu">
             <ul>
@@ -251,5 +259,6 @@
             </ul>
         </section>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
