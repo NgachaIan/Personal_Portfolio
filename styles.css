@@ -517,7 +517,7 @@ textarea {
   }
 
   .mobile-menu {
-    display: none; /* Initially hide the mobile menu */
+    display: none;
   }
 
   .mobile-menu ul {
@@ -530,18 +530,18 @@ textarea {
     gap: 10px;
     margin-bottom: 10px;
   }
-  
+
   .mobile-menu ul li {
     margin-bottom: -50px;
   }
-  /* Styles for the hamburger menu icon */
+
   .hamburger-menu {
     display: inline-block;
     cursor: pointer;
     padding: 10px;
     border-radius: 4px;
   }
-  
+
   .hamburger-menu span {
     display: block;
     width: 25px;
@@ -549,25 +549,25 @@ textarea {
     background-color: #333;
     margin-bottom: 10px;
   }
-  
-  /* Styles for the close (X) icon */
+
   .close-icon {
-    display: none; /* Initially hide the close icon */
+    display: none;
     margin-bottom: -40px;
   }
-  
-  .close-icon::before, .close-icon::after {
+
+  .close-icon::before,
+  .close-icon::after {
     content: '';
     position: absolute;
     width: 20px;
     height: 3px;
     background-color: #333;
   }
-  
+
   .close-icon::before {
     transform: rotate(45deg);
   }
-  
+
   .close-icon::after {
     transform: rotate(-45deg);
   }
@@ -639,7 +639,7 @@ textarea {
   }
 
   .mobile-menu {
-    display: none; /* Initially hide the mobile menu */
+    display: none;
   }
 
   .mobile-menu ul {
@@ -652,18 +652,18 @@ textarea {
     gap: 10px;
     margin-bottom: 10px;
   }
-  
+
   .mobile-menu ul li {
     margin-bottom: -50px;
   }
-  /* Styles for the hamburger menu icon */
+
   .hamburger-menu {
     display: inline-block;
     cursor: pointer;
     padding: 10px;
     border-radius: 4px;
   }
-  
+
   .hamburger-menu span {
     display: block;
     width: 25px;
@@ -671,29 +671,28 @@ textarea {
     background-color: #333;
     margin-bottom: 10px;
   }
-  
-  /* Styles for the close (X) icon */
+
   .close-icon {
-    display: none; /* Initially hide the close icon */
+    display: none;
     margin-bottom: -40px;
   }
-  
-  .close-icon::before, .close-icon::after {
+
+  .close-icon::before,
+  .close-icon::after {
     content: '';
     position: absolute;
     width: 20px;
     height: 3px;
     background-color: #333;
   }
-  
+
   .close-icon::before {
     transform: rotate(45deg);
   }
-  
+
   .close-icon::after {
     transform: rotate(-45deg);
   }
-
 }
 
 @media (min-width: 768px) {
