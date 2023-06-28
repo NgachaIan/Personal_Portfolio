@@ -1,184 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Desktop</title>
     <link rel="stylesheet" href="styles.css">
-</head> 
+</head>
+
 <body>
-    <header class="bar-container">
-        <nav>
+    <header class="bar-container" id="header">
+        <div class="hamburger-menu" onclick="toggleMobileMenu()">
+        </div>
+        <nav class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li onclick="scrollToSection('#portfolio')">Portfolio</li>
+                <li onclick="scrollToSection('#about')">About</li>
+                <li onclick="scrollToSection('#contact')">Contact</li>
+            </ul>
+            <div class="close-icon pop" onclick="toggleMobileMenu()">
+                <img src="Images/Icon.png"></li>
+            </div>
         </nav>
-   </header>
-   <div class="container">
+    </header>
+
+    <div class="container">
         <section class="menu">
             <ul>
                 <li>Portfolio</li>
                 <li>About</li>
                 <li>Contact</li>
-           </ul>
+            </ul>
         </section>
-       <section class="head">
-           <h1> 
-               Hey there. I’m Ian. 
-               <div class="title"> I’m a software developer </div>
-           </h1>
+        <section class="head">
+            <h1>
+                Hey there. I’m Ian.
+                <div class="title"> I’m a software developer </div>
+            </h1>
         </section>
         <section class="text">
-            <p> I can help you build a product ,feature or website Look through some of my work and <br> experience! If you like what you see and have a project you need coded, <br>don’t hesitate to contact me.
+            <p> I can help you build a product ,feature or website Look through some of my work and <br> experience! If
+                you like what you see and have a project you need coded, <br>don’t hesitate to contact me.
             </p>
         </section>
         <div class="socials">
             <ul>
-                <li> <a href=""> <img src="Images/twitter.png" alt="Twitter"/> </a> </li>
-                <li> <a href=""> <img src="Images/Linkedin icon.png" alt="LinkedIn"/> </a> <li>
-                <li> <a href=""> <img src="Images/medium.png" alt="Medium"/> </a> </li>
-                <li> <a href=""> <img src="Images/github.png" alt="GitHub"/> </a> </li>
-                <li> <a href=""> <img src="Images/angellist.png" alt="Angellist"/> </a> </li>
-             </ul>
+                <li> <a href=""> <img src="Images/twitter.png" alt="Twitter" /> </a> </li>
+                <li> <a href=""> <img src="Images/Linkedin icon.png" alt="LinkedIn" /> </a>
+                <li>
+                <li> <a href=""> <img src="Images/medium.png" alt="Medium" /> </a> </li>
+                <li> <a href=""> <img src="Images/github.png" alt="GitHub" /> </a> </li>
+                <li> <a href=""> <img src="Images/angellist.png" alt="Angellist" /> </a> </li>
+            </ul>
         </div>
         <section id="bellow">
-            <img src="./Images/Disabled.png"/>
+            <img src="./Images/Disabled.png" />
         </section>
     </div>
     <section>
-    <div class="box">
-        <section class="works">
-            <h2>My Recent Works</h2> 
-        </section>
-        <div class="background">
-            <div class="grid">
-                <div class="grid-item">
-                    <h2>Multi-Post Stories Gain+Glory</h2>
+        <div class="box">
+            <section class="works" id="portfolio">
+                <h2>My Recent Works</h2>
+            </section>
+            <div class="background">
+                <div class="grid">
+                    <div class="grid-item">
+                        <h2>Multi-Post Stories Gain+Glory</h2>
+                    </div>
+                    <div class="grid-item">
+                        <ul>
+                            <li> Ruby on Rails</li>
+                            <li> CSS </li>
+                            <li> JavaScript </li>
+                            <li> HTML </li>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <button>
+                            See Project
+                        </button>
+                    </div>
                 </div>
-                <div class="grid-item">
-                    <ul>
-                        <li> Ruby on Rails</li>
-                        <li> CSS </li>
-                        <li> JavaScript </li>
-                        <li> HTML </li>
-                    </ul>
+            </div>
+            <div class="background">
+                <div class="grid">
+                    <div class="grid-item">
+                        <h2>Multi-Post Stories Gain+Glory</h2>
+                    </div>
+                    <div class="grid-item">
+                        <ul>
+                            <li> Ruby on Rails</li>
+                            <li> CSS </li>
+                            <li> JavaScript </li>
+                            <li> HTML </li>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <button>
+                            See Project
+                        </button>
+                    </div>
                 </div>
-                <div class="grid-item">
-                    <button>
-                        See Project
-                    </button>
+            </div>
+            <div class="background">
+                <div class="grid">
+                    <div class="grid-item">
+                        <h2>Multi-Post Stories Gain+Glory</h2>
+                    </div>
+                    <div class="grid-item">
+                        <ul>
+                            <li> Ruby on Rails</li>
+                            <li> CSS </li>
+                            <li> JavaScript </li>
+                            <li> HTML </li>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <button>
+                            See Project
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="background">
+                <div class="grid">
+                    <div class="grid-item">
+                        <h2>Multi-Post Stories Gain+Glory</h2>
+                    </div>
+                    <div class="grid-item">
+                        <ul>
+                            <li> Ruby on Rails</li>
+                            <li> CSS </li>
+                            <li> JavaScript </li>
+                            <li> HTML </li>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <button>
+                            See Project
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="background">
+                <div class="grid">
+                    <div class="grid-item">
+                        <h2>Multi-Post Stories Gain+Glory</h2>
+                    </div>
+                    <div class="grid-item">
+                        <ul>
+                            <li> Ruby on Rails</li>
+                            <li> CSS </li>
+                            <li> JavaScript </li>
+                            <li> HTML </li>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <button>
+                            See Project
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="background">
+                <div class="grid">
+                    <div class="grid-item">
+                        <h2>Multi-Post Stories Gain+Glory</h2>
+                    </div>
+                    <div class="grid-item">
+                        <ul>
+                            <li> Ruby on Rails</li>
+                            <li> CSS </li>
+                            <li> JavaScript </li>
+                            <li> HTML </li>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <button>
+                            See Project
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="background">
-            <div class="grid">
-                <div class="grid-item">
-                    <h2>Multi-Post Stories Gain+Glory</h2>
-                </div>
-                <div class="grid-item">
-                    <ul>
-                        <li> Ruby on Rails</li>
-                        <li> CSS </li>
-                        <li> JavaScript </li>
-                        <li> HTML </li>
-                    </ul>
-                </div>
-                <div class="grid-item">
-                    <button>
-                        See Project
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="background">
-            <div class="grid">
-                <div class="grid-item">
-                    <h2>Multi-Post Stories Gain+Glory</h2>
-                </div>
-                <div class="grid-item">
-                    <ul>
-                        <li> Ruby on Rails</li>
-                        <li> CSS </li>
-                        <li> JavaScript </li>
-                        <li> HTML </li>
-                    </ul>
-                </div>
-                <div class="grid-item">
-                    <button>
-                        See Project
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="background">
-            <div class="grid">
-                <div class="grid-item">
-                    <h2>Multi-Post Stories Gain+Glory</h2>
-                </div>
-                <div class="grid-item">
-                    <ul>
-                        <li> Ruby on Rails</li>
-                        <li> CSS </li>
-                        <li> JavaScript </li>
-                        <li> HTML </li>
-                    </ul>
-                </div>
-                <div class="grid-item">
-                    <button>
-                        See Project
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="background">
-            <div class="grid">
-                <div class="grid-item">
-                    <h2>Multi-Post Stories Gain+Glory</h2>
-                </div>
-                <div class="grid-item">
-                    <ul>
-                        <li> Ruby on Rails</li>
-                        <li> CSS </li>
-                        <li> JavaScript </li>
-                        <li> HTML </li>
-                    </ul>
-                </div>
-                <div class="grid-item">
-                    <button>
-                        See Project
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="background">
-            <div class="grid">
-                <div class="grid-item">
-                    <h2>Multi-Post Stories Gain+Glory</h2>
-                </div>
-                <div class="grid-item">
-                    <ul>
-                        <li> Ruby on Rails</li>
-                        <li> CSS </li>
-                        <li> JavaScript </li>
-                        <li> HTML </li>
-                    </ul>
-                </div>
-                <div class="grid-item">
-                    <button>
-                        See Project
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
     </section>
     <div class="a-container">
-        <section class="about">
-            <h2> 
-                About me 
+        <section class="about" id="about">
+            <h2>
+                About me
             </h2>
         </section>
         <section class="text">
             <p>
-                I can help you build a product , feature or website Look through some of my work and <br>experience! If you like what you see and have a project you need coded,  <br>don’t hesitate to contact me.
+                I can help you build a product , feature or website Look through some of my work and <br>experience! If
+                you like what you see and have a project you need coded, <br>don’t hesitate to contact me.
             </p>
         </section>
         <button>
@@ -223,33 +239,37 @@
         </section>
     </div>
     <div class="form-container">
-        <section class="touch">
-            <h2> 
+        <section class="touch" id="contact">
+            <h2>
                 I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
             </h2>
         </section>
         <form class="connect" action="https://formspree.io/f/mwkjdnnq" method="POST" autocomplete="off">
-            <input id="name" name="username" placeholder="Full name" required type="text" maxlength="30"/>
-            <input id="mail" name="mail" placeholder="Email adress" required type="email"/>
-            <textarea id="comment" name="comment" maxlength="500" placeholder="Hey I’d like to connect to... " required></textarea>
+            <input id="name" name="username" placeholder="Full name" required type="text" maxlength="30" />
+            <input id="mail" name="mail" placeholder="Email adress" required type="email" />
+            <textarea id="comment" name="comment" maxlength="500" placeholder="Hey I’d like to connect to... "
+                required></textarea>
             <button>
                 Get in touch
-            </button> 
-        </form>  
+            </button>
+        </form>
         <section class="mail">
             <p>ngachaian@gmail.com</p>
-        </section>        
-     </div> 
-     <footer class="foot">
+        </section>
+    </div>
+    <footer class="foot">
         <section class="socials">
             <ul>
-                <li> <a href=""> <img src="Images/twitter.png" alt="Twitter"/> </a> </li>
-                <li> <a href=""> <img src="Images/Linkedin icon.png" alt="LinkedIn"/> </a> <li>
-                <li> <a href=""> <img src="Images/medium.png" alt="Medium"/> </a> </li>
-                <li> <a href=""> <img src="Images/github.png" alt="GitHub"/> </a> </li>
-                <li> <a href=""> <img src="Images/angellist.png" alt="Angellist"/> </a> </li>
+                <li> <a href=""> <img src="Images/twitter.png" alt="Twitter" /> </a> </li>
+                <li> <a href=""> <img src="Images/Linkedin icon.png" alt="LinkedIn" /> </a>
+                <li>
+                <li> <a href=""> <img src="Images/medium.png" alt="Medium" /> </a> </li>
+                <li> <a href=""> <img src="Images/github.png" alt="GitHub" /> </a> </li>
+                <li> <a href=""> <img src="Images/angellist.png" alt="Angellist" /> </a> </li>
             </ul>
         </section>
     </footer>
+    <script src="index.js"></script>
 </body>
+
 </html>
