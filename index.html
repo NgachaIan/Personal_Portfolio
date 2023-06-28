@@ -20,7 +20,7 @@
                 <li onclick="scrollToSection('#contact')">Contact</li>
             </ul>
             <div class="close-icon" onclick="toggleMobileMenu()">
-              <span class="pop">X</span>
+                <span class="pop">X</span>
             </div>
         </nav>
     </header>
@@ -77,7 +77,7 @@
                         </ul>
                     </div>
                     <div class="grid-item">
-                        <button>
+                        <button class="see-project-button" data-project-id="1">
                             See Project
                         </button>
                     </div>
@@ -97,7 +97,7 @@
                         </ul>
                     </div>
                     <div class="grid-item">
-                        <button>
+                        <button class="see-project-button" data-project-id="2">
                             See Project
                         </button>
                     </div>
@@ -117,7 +117,7 @@
                         </ul>
                     </div>
                     <div class="grid-item">
-                        <button>
+                        <button class="see-project-button" data-project-id="3">
                             See Project
                         </button>
                     </div>
@@ -137,7 +137,7 @@
                         </ul>
                     </div>
                     <div class="grid-item">
-                        <button>
+                        <button class="see-project-button" data-project-id="4">
                             See Project
                         </button>
                     </div>
@@ -157,7 +157,7 @@
                         </ul>
                     </div>
                     <div class="grid-item">
-                        <button>
+                        <button class="see-project-button" data-project-id="5">
                             See Project
                         </button>
                     </div>
@@ -177,13 +177,20 @@
                         </ul>
                     </div>
                     <div class="grid-item">
-                        <button>
+                        <button class="see-project-button" data-project-id="6">
                             See Project
                         </button>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="popup-container">
+            <div class="popup-content">
+              <div class="close-button">&times;</div>
+              <div id="project-details"></div>
+            </div>
+        </div>
+          
     </section>
     <div class="a-container">
         <section class="about" id="about">
