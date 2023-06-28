@@ -82,19 +82,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function generateProjectDetails(project) {
     const projectHTML = `
-      <h2>${project.name}</h2>
       <div class="image-container">
         <img class="featured-image" src="${project.featuredImage}" alt="Project Image">
       </div>
-      <div class="project-description">${project.description}</div>
+      <div class="name-container">
+        <h2 class="project-name">${project.name}</h2>
+        <div class="button-group">
+          <button class="project-button" onclick="window.open('${project.liveVersion}', '_blank')">Live Version</button>
+          <button class="project-button" onclick="window.open('${project.sourceLink}', '_blank')">Source Code</button>
+        </div>
+      </div>
       <h3>Technologies used:</h3>
-      <ul>
+      <ul class="grid-item">
         ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
       </ul>
-      <div>
-        <button class="project-button" onclick="window.open('${project.liveVersion}', '_blank')">Live Version</button>
-        <button class="project-button" onclick="window.open('${project.sourceLink}', '_blank')">Source Code</button>
-    </div>
+      <div class="project-description">${project.description}</div>
     `;
     return projectHTML;
   }
