@@ -663,6 +663,11 @@ textarea {
   .close-icon.open {
     margin-bottom: 10px;
   }
+
+  .pop {
+    margin-left: 320px;
+    margin-top: -180px;
+  }
 }
 
 @media (min-width: 768px) {
