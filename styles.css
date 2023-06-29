@@ -353,6 +353,11 @@ li:hover {
   object-fit: contain;
 }
 
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+
 /* About Me section */
 
 .a-container {
