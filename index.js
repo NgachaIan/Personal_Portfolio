@@ -192,3 +192,35 @@ function sendFormData() {
 }
 
 
+const form = document.getElementById('myForm');
+const inputs = form.querySelectorAll('input, textarea');
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  const formData = localStorage.getItem('formData');
+
+  if (formData) {
+    const parsedData = JSON.parse(formData);
+    inputs.forEach(input => {
+      const name = input.name;
+      if (parsedData[name]) {
+        input.value = parsedData[name];
+      }
+    });
+  }
+});
+
+
+inputs.forEach(input => {
+  input.addEventListener('input', () => {
+    const formData = {};
+    inputs.forEach(input => {
+      const name = input.name;
+      const value = input.value;
+      formData[name] = value;
+    });
+    localStorage.setItem('formData', JSON.stringify(formData));
+  });
+});
+
+
