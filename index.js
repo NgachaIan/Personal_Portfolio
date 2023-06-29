@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const projects = [
     {
@@ -148,3 +149,46 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeButton = document.querySelector('.close-button');
   closeButton.addEventListener('click', closePopup);
 });
+
+
+document.getElementById('myForm').addEventListener('submit', function (event) {
+  event.preventDefault(); 
+
+  
+  const emailInput = document.getElementById('mail');
+  const email = emailInput.value.toLowerCase(); 
+
+  
+  if (email !== emailInput.value) {
+    showError('Email must be in lowercase.');
+  } else {
+    sendFormData();
+  }
+});
+
+function showError(message) {
+  const errorMessage = document.getElementById('errorMessage');
+  errorMessage.textContent = message;
+}
+
+function sendFormData() {
+  const form = document.getElementById('myForm');
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+  })
+    .then(response => {
+      if (response.ok) {
+        console.log('Form submitted successfully!');
+      } else {
+        console.error('Form submission failed!');
+      }
+    })
+    .catch(error => {
+      console.error('Form submission failed:', error);
+    });
+}
+
+
