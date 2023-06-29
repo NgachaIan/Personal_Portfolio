@@ -222,13 +222,3 @@ inputs.forEach(input => {
     localStorage.setItem('formData', JSON.stringify(formData));
   });
 });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  var navItems = document.querySelectorAll('.mobile-menu ul li');
-  for (var i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener('click', function() {
-      scrollToSection(this.getAttribute('data-section'));
-    });
-  }
-});
