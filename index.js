@@ -36,10 +36,10 @@ function hideMobileMenu() {
   header.style.paddingTop = '40px';
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var navItems = document.querySelectorAll('.mobile-menu ul li');
   for (var i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener('click', function() {
+    navItems[i].addEventListener('click', function () {
       scrollToSection(this.getAttribute('data-section'));
     });
   }
@@ -150,45 +150,40 @@ document.addEventListener('DOMContentLoaded', () => {
   closeButton.addEventListener('click', closePopup);
 });
 
+function getInTouch() {
+  const name = document.getElementById("name").value;
+  const emailInput = document.getElementById("mail");
+  const email = emailInput.value.toLowerCase();
+  const comment = document.getElementById("comment").value;
 
-document.getElementById('myForm').addEventListener('submit', function (event) {
-  event.preventDefault(); 
 
-  
-  const emailInput = document.getElementById('mail');
-  const email = emailInput.value.toLowerCase(); 
-
-  
-  if (email !== emailInput.value) {
-    showError('Email must be in lowercase.');
-  } else {
-    sendFormData();
+  if (name === "" || email === "" || comment === "") {
+    document.getElementById("errorMessage").innerHTML = "Please fill out all fields.";
+    return;
   }
-});
 
-function showError(message) {
-  const errorMessage = document.getElementById('errorMessage');
-  errorMessage.textContent = message;
-}
+  
+  if (email !== emailInput.value.toLowerCase()) {
+    document.getElementById("errorMessage").innerHTML =
+      "Please enter your email address in lowercase letters.";
+    return;
+  }
 
-function sendFormData() {
-  const form = document.getElementById('myForm');
-  const formData = new FormData(form);
-
-  fetch(form.action, {
-    method: form.method,
+  
+  const formData = new FormData(document.getElementById("myForm"));
+  fetch("https://formspree.io/f/mzblpang", {
+    method: "POST",
     body: formData,
   })
     .then(response => {
       if (response.ok) {
-        console.log('Form submitted successfully!');
+        document.getElementById("errorMessage").innerHTML = "Your message has been sent.";
       } else {
-        console.error('Form submission failed!');
+        document.getElementById("errorMessage").innerHTML =
+          "Something went wrong. Please try again later.";
       }
     })
     .catch(error => {
-      console.error('Form submission failed:', error);
+      document.getElementById("errorMessage").innerHTML = "Form submission failed: " + error;
     });
 }
-
-
