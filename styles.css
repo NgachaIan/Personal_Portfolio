@@ -299,6 +299,7 @@ li:hover {
 
 .project-name {
   margin-left: 0;
+  margin-top: 20px;
 }
 
 .button-group {
@@ -356,6 +357,17 @@ li:hover {
 .error-message {
   color: red;
   margin-top: 5px;
+  width: 550px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-image {
+  width: 100%;
+  object-fit: cover;
 }
 
 /* About Me section */
@@ -808,6 +820,15 @@ textarea {
   .button-group {
     order: 3;
     margin-top: 16px;
+  }
+
+  .image-container {
+    width: 255px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
