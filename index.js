@@ -1,8 +1,8 @@
 function toggleMobileMenu() {
-  var menu = document.getElementById('mobileMenu');
-  var hamburgerMenu = document.querySelector('.hamburger-menu');
-  var closeIcon = document.querySelector('.close-icon');
-  var header = document.getElementById('header');
+  const menu = document.getElementById('mobileMenu');
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const closeIcon = document.querySelector('.close-icon');
+  const header = document.getElementById('header');
 
   if (menu.style.display === 'block') {
     menu.style.display = 'none';
@@ -17,18 +17,13 @@ function toggleMobileMenu() {
   }
 }
 
-function scrollToSection(sectionId) {
-  var section = document.querySelector(sectionId);
-  section.scrollIntoView({ behavior: 'smooth' });
-
-  hideMobileMenu();
-}
+toggleMobileMenu();
 
 function hideMobileMenu() {
-  var menu = document.getElementById('mobileMenu');
-  var hamburgerMenu = document.querySelector('.hamburger-menu');
-  var closeIcon = document.querySelector('.close-icon');
-  var header = document.getElementById('header');
+  const menu = document.getElementById('mobileMenu');
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const closeIcon = document.querySelector('.close-icon');
+  const header = document.getElementById('header');
 
   menu.style.display = 'none';
   hamburgerMenu.style.display = 'block';
@@ -36,10 +31,16 @@ function hideMobileMenu() {
   header.style.paddingTop = '40px';
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  var navItems = document.querySelectorAll('.mobile-menu ul li');
-  for (var i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener('click', function() {
+function scrollToSection(sectionId) {
+  const section = document.querySelector(sectionId);
+  section.scrollIntoView({ behavior: 'smooth' });
+  hideMobileMenu();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navItems = document.querySelectorAll('.mobile-menu ul li');
+  for (let i = 0; i < navItems.length; i += 1) {
+    navItems[i].addEventListener('click', function () {
       scrollToSection(this.getAttribute('data-section'));
     });
   }
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 1,
       name: 'Project 1',
       description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,',
-      featuredImage: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      featuredImage: 'https://img.freepik.com/free-photo/team-software-programmers-leaving-after-analyzing-source-code-wall-screen-tv-comparing-errors-using-digital-tablet-system-engineers-passing-screens-compiling-code-artificial-intelligence_482257-41848.jpg?size=626&ext=jpg&ga=GA1.1.117870262.1687918357&semt=ais',
       technologies: ['Ruby on Rails', ' CSS', ' JavaScript', ' HTML'],
       liveVersion: 'https://example.com/project1',
       sourceLink: 'https://github.com/example/project1',
@@ -116,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
       <ul class="grid-item2">
-        ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
+        ${project.technologies.map((tech) => `<li>${tech}</li>`).join('')}
       </ul>
       <div class="project-description">${project.description}</div>
     `;
@@ -124,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showProjectPopup(projectId) {
-    const project = projects.find(p => p.id === projectId);
+    const project = projects.find((p) => p.id === projectId);
     const projectDetailsContainer = document.getElementById('project-details');
     projectDetailsContainer.innerHTML = generateProjectDetails(project);
 
@@ -138,13 +139,80 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const seeProjectButtons = document.querySelectorAll('.see-project-button');
-  seeProjectButtons.forEach(button => {
+  seeProjectButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      const projectId = parseInt(button.dataset.projectId);
+      const projectId = parseInt('', button.dataset.projectId);
       showProjectPopup(projectId);
     });
   });
 
   const closeButton = document.querySelector('.close-button');
   closeButton.addEventListener('click', closePopup);
+});
+
+document.getElementById('myForm').addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const emailInput = document.getElementById('mail');
+  const email = emailInput.value.toLowerCase();
+
+  function showError(message) {
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.textContent = message;
+  }
+
+  function sendFormData() {
+    const form = document.getElementById('myForm');
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log('Form submitted successfully!');
+        } else {
+          console.error('Form submission failed!');
+        }
+      })
+      .catch((error) => {
+        console.error('Form submission failed:', error);
+      });
+  }
+
+  if (email !== emailInput.value) {
+    showError('Email must be in lowercase.');
+  } else {
+    sendFormData();
+  }
+});
+
+const form = document.getElementById('myForm');
+const inputs = form.querySelectorAll('input, textarea');
+
+window.addEventListener('DOMContentLoaded', () => {
+  const formData = localStorage.getItem('formData');
+
+  if (formData) {
+    const parsedData = JSON.parse(formData);
+    inputs.forEach((input) => {
+      const { name } = input.name;
+      if (parsedData[name]) {
+        input.value = parsedData[name];
+      }
+    });
+  }
+});
+
+inputs.forEach((input) => {
+  input.addEventListener('input', () => {
+    const formData = {};
+    inputs.forEach((input) => {
+      const { name } = input.name;
+      const { value } = input.value;
+      formData[name] = value;
+    });
+    localStorage.setItem('formData', JSON.stringify(formData));
+  });
 });
