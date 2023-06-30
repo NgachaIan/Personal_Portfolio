@@ -337,8 +337,8 @@ li:hover {
 }
 
 .image-container {
-  width: 550px; /* Adjust the desired width */
-  height: 200px; /* Adjust the desired height */
+  width: 550px;
+  height: 200px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -803,8 +803,8 @@ textarea {
   }
 
   .image-container {
-    width: 255px; /* Adjust the desired width */
-    height: 200px; /* Adjust the desired height */
+    width: 255px;
+    height: 200px;
     overflow: hidden;
     display: flex;
     justify-content: center;
