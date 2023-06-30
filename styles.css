@@ -146,7 +146,7 @@ button:active {
 }
 
 #bellow {
-  margin-top: 82px;
+  margin-top: 81px;
 }
 
 /* Recent Works section */
@@ -299,7 +299,6 @@ li:hover {
 
 .project-name {
   margin-left: 0;
-  margin-top: 20px;
 }
 
 .button-group {
@@ -312,6 +311,7 @@ li:hover {
   display: inline-block;
   padding: 10px 20px;
   background-color: #36b37e;
+  margin-top: -5%;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -337,17 +337,25 @@ li:hover {
 }
 
 .image-container {
-  width: 550px;
-  height: 200px;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
 }
 
 .featured-image {
-  width: 100%;
-  object-fit: cover;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
 }
 
 /* About Me section */
@@ -800,15 +808,6 @@ textarea {
   .button-group {
     order: 3;
     margin-top: 16px;
-  }
-
-  .image-container {
-    width: 255px;
-    height: 200px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 
