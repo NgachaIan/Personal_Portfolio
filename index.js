@@ -118,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
       <ul class="grid-item2">
         ${project.technologies.map((tech) => `<li>${tech}</li>`).join('')}
-        ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
       </ul>
       <div class="project-description">${project.description}</div>
     `;
@@ -127,7 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showProjectPopup(projectId) {
     const project = projects.find((p) => p.id === projectId);
-    const project = projects.find(p => p.id === projectId);
     const projectDetailsContainer = document.getElementById('project-details');
     projectDetailsContainer.innerHTML = generateProjectDetails(project);
 
@@ -142,9 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const seeProjectButtons = document.querySelectorAll('.see-project-button');
   seeProjectButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const projectId = parseInt('', button.dataset.projectId);
-  seeProjectButtons.forEach(button => {
     button.addEventListener('click', () => {
       const projectId = parseInt('', button.dataset.projectId);
       showProjectPopup(projectId);
@@ -221,4 +216,3 @@ inputs.forEach((input) => {
     localStorage.setItem('formData', JSON.stringify(formData));
   });
 });
-
