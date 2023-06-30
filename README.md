@@ -44,6 +44,11 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+##📹 Video Description <a name="video-description"></a>
+- [Here is the link to the video description](https://www.loom.com/share/d328a7a92a294f3795c9254f53ba9c70?sid=a5b75c76-c555-47ef-8aa6-1bd5b7b78cc2).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Here is the link to the live experience](https://ngachaian.github.io/Personal_Portfolio/).
