@@ -1,8 +1,8 @@
 function toggleMobileMenu() {
-  var menu = document.getElementById('mobileMenu');
-  var hamburgerMenu = document.querySelector('.hamburger-menu');
-  var closeIcon = document.querySelector('.close-icon');
-  var header = document.getElementById('header');
+  const menu = document.getElementById('mobileMenu');
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const closeIcon = document.querySelector('.close-icon');
+  const header = document.getElementById('header');
 
   if (menu.style.display === 'block') {
     menu.style.display = 'none';
@@ -17,18 +17,13 @@ function toggleMobileMenu() {
   }
 }
 
-function scrollToSection(sectionId) {
-  var section = document.querySelector(sectionId);
-  section.scrollIntoView({ behavior: 'smooth' });
-
-  hideMobileMenu();
-}
+toggleMobileMenu();
 
 function hideMobileMenu() {
-  var menu = document.getElementById('mobileMenu');
-  var hamburgerMenu = document.querySelector('.hamburger-menu');
-  var closeIcon = document.querySelector('.close-icon');
-  var header = document.getElementById('header');
+  const menu = document.getElementById('mobileMenu');
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const closeIcon = document.querySelector('.close-icon');
+  const header = document.getElementById('header');
 
   menu.style.display = 'none';
   hamburgerMenu.style.display = 'block';
@@ -36,15 +31,20 @@ function hideMobileMenu() {
   header.style.paddingTop = '40px';
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  var navItems = document.querySelectorAll('.mobile-menu ul li');
-  for (var i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener('click', function() {
+function scrollToSection(sectionId) {
+  const section = document.querySelector(sectionId);
+  section.scrollIntoView({ behavior: 'smooth' });
+  hideMobileMenu();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navItems = document.querySelectorAll('.mobile-menu ul li');
+  for (let i = 0; i < navItems.length; i += 1) {
+    navItems[i].addEventListener('click', function () {
       scrollToSection(this.getAttribute('data-section'));
     });
   }
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const projects = [
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
       <ul class="grid-item2">
-        ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
+        ${project.technologies.map((tech) => `<li>${tech}</li>`).join('')}
       </ul>
       <div class="project-description">${project.description}</div>
     `;
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showProjectPopup(projectId) {
-    const project = projects.find(p => p.id === projectId);
+    const project = projects.find((p) => p.id === projectId);
     const projectDetailsContainer = document.getElementById('project-details');
     projectDetailsContainer.innerHTML = generateProjectDetails(project);
 
@@ -139,9 +139,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const seeProjectButtons = document.querySelectorAll('.see-project-button');
-  seeProjectButtons.forEach(button => {
+  seeProjectButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      const projectId = parseInt(button.dataset.projectId);
+      const projectId = parseInt('', button.dataset.projectId);
       showProjectPopup(projectId);
     });
   });
@@ -150,15 +150,37 @@ document.addEventListener('DOMContentLoaded', () => {
   closeButton.addEventListener('click', closePopup);
 });
 
+document.getElementById('myForm').addEventListener('submit', (event) => {
+  event.preventDefault();
 
-document.getElementById('myForm').addEventListener('submit', function (event) {
-  event.preventDefault(); 
-
-  
   const emailInput = document.getElementById('mail');
-  const email = emailInput.value.toLowerCase(); 
+  const email = emailInput.value.toLowerCase();
 
-  
+  function showError(message) {
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.textContent = message;
+  }
+
+  function sendFormData() {
+    const form = document.getElementById('myForm');
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log('Form submitted successfully!');
+        } else {
+          console.error('Form submission failed!');
+        }
+      })
+      .catch((error) => {
+        console.error('Form submission failed:', error);
+      });
+  }
+
   if (email !== emailInput.value) {
     showError('Email must be in lowercase.');
   } else {
@@ -166,43 +188,16 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
   }
 });
 
-function showError(message) {
-  const errorMessage = document.getElementById('errorMessage');
-  errorMessage.textContent = message;
-}
-
-function sendFormData() {
-  const form = document.getElementById('myForm');
-  const formData = new FormData(form);
-
-  fetch(form.action, {
-    method: form.method,
-    body: formData,
-  })
-    .then(response => {
-      if (response.ok) {
-        console.log('Form submitted successfully!');
-      } else {
-        console.error('Form submission failed!');
-      }
-    })
-    .catch(error => {
-      console.error('Form submission failed:', error);
-    });
-}
-
-
 const form = document.getElementById('myForm');
 const inputs = form.querySelectorAll('input, textarea');
-
 
 window.addEventListener('DOMContentLoaded', () => {
   const formData = localStorage.getItem('formData');
 
   if (formData) {
     const parsedData = JSON.parse(formData);
-    inputs.forEach(input => {
-      const name = input.name;
+    inputs.forEach((input) => {
+      const { name } = input.name;
       if (parsedData[name]) {
         input.value = parsedData[name];
       }
@@ -210,13 +205,12 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
-inputs.forEach(input => {
+inputs.forEach((input) => {
   input.addEventListener('input', () => {
     const formData = {};
-    inputs.forEach(input => {
-      const name = input.name;
-      const value = input.value;
+    inputs.forEach((input) => {
+      const { name } = input.name;
+      const { value } = input.value;
       formData[name] = value;
     });
     localStorage.setItem('formData', JSON.stringify(formData));
