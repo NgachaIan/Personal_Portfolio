@@ -229,10 +229,125 @@ button:active {
   transition: 0.3s;
 }
 
+.grid-item2 {
+  display: flex;
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+
+.grid-item2 ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-item2 li {
+  font-size: 0.8em;
+  color: #3a4a42;
+  background-color: #ebf0ee;
+  border-radius: 4px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 30px;
+  padding: 0;
+  transition: 0.3s;
+}
+
 li:hover {
   color: #ebf0ee;
   background-color: #60c095;
   scale: 1.2;
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: 10% auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.name-container {
+  display: flex;
+  align-items: center;
+}
+
+.project-name {
+  margin-left: 0;
+  margin-top: 20px;
+}
+
+.button-group {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.project-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #36b37e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #0056b3;
+}
+
+.project-button:focus {
+  outline: none;
+}
+
+.project-description {
+  display: flex;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+.image-container {
+  width: 550px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-image {
+  width: 100%;
+  object-fit: cover;
 }
 
 /* About Me section */
@@ -667,6 +782,33 @@ textarea {
   .pop {
     margin-left: 320px;
     margin-top: -180px;
+  }
+
+  .name-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-item2 {
+    order: 1;
+  }
+
+  .project-description {
+    order: 2;
+  }
+
+  .button-group {
+    order: 3;
+    margin-top: 16px;
+  }
+
+  .image-container {
+    width: 255px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
