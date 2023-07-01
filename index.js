@@ -34,6 +34,7 @@ function hideMobileMenu() {
 function scrollToSection(sectionId) {
   const section = document.querySelector(sectionId);
   section.scrollIntoView({ behavior: 'smooth' });
+
   hideMobileMenu();
 }
 
@@ -141,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const seeProjectButtons = document.querySelectorAll('.see-project-button');
   seeProjectButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      const projectId = parseInt('', button.dataset.projectId);
+      const projectId = parseInt(button.dataset.projectId, 10);
       showProjectPopup(projectId);
     });
   });
@@ -165,19 +166,19 @@ document.getElementById('myForm').addEventListener('submit', (event) => {
     const form = document.getElementById('myForm');
     const formData = new FormData(form);
 
-    fetch(form.action, {
-      method: form.method,
-      body: formData,
-    })
+    axios.post('https://formspree.io/f/mzblpang', formData)
       .then((response) => {
-        if (response.ok) {
-          console.log('Form submitted successfully!');
+        if (response.status === 200) {
+          // The form was submitted successfully.
+          document.getElementById('errorMessage').innerHTML = 'Your message has been sent.';
         } else {
-          console.error('Form submission failed!');
+          // The form was not submitted successfully.
+          document.getElementById('errorMessage').innerHTML = 'Something went wrong. Please try again later.';
         }
       })
       .catch((error) => {
-        console.error('Form submission failed:', error);
+        // An error occurred.
+        document.getElementById('errorMessage').innerHTML = `Form submission failed: ${error}`;
       });
   }
 
@@ -186,33 +187,4 @@ document.getElementById('myForm').addEventListener('submit', (event) => {
   } else {
     sendFormData();
   }
-});
-
-const form = document.getElementById('myForm');
-const inputs = form.querySelectorAll('input, textarea');
-
-window.addEventListener('DOMContentLoaded', () => {
-  const formData = localStorage.getItem('formData');
-
-  if (formData) {
-    const parsedData = JSON.parse(formData);
-    inputs.forEach((input) => {
-      const { name } = input.name;
-      if (parsedData[name]) {
-        input.value = parsedData[name];
-      }
-    });
-  }
-});
-
-inputs.forEach((input) => {
-  input.addEventListener('input', () => {
-    const formData = {};
-    inputs.forEach((input) => {
-      const { name } = input.name;
-      const { value } = input.value;
-      formData[name] = value;
-    });
-    localStorage.setItem('formData', JSON.stringify(formData));
-  });
 });
