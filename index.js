@@ -1,8 +1,8 @@
 function toggleMobileMenu() {
-  var menu = document.getElementById('mobileMenu');
-  var hamburgerMenu = document.querySelector('.hamburger-menu');
-  var closeIcon = document.querySelector('.close-icon');
-  var header = document.getElementById('header');
+  const menu = document.getElementById('mobileMenu');
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const closeIcon = document.querySelector('.close-icon');
+  const header = document.getElementById('header');
 
   if (menu.style.display === 'block') {
     menu.style.display = 'none';
@@ -17,18 +17,13 @@ function toggleMobileMenu() {
   }
 }
 
-function scrollToSection(sectionId) {
-  var section = document.querySelector(sectionId);
-  section.scrollIntoView({ behavior: 'smooth' });
-
-  hideMobileMenu();
-}
+toggleMobileMenu();
 
 function hideMobileMenu() {
-  var menu = document.getElementById('mobileMenu');
-  var hamburgerMenu = document.querySelector('.hamburger-menu');
-  var closeIcon = document.querySelector('.close-icon');
-  var header = document.getElementById('header');
+  const menu = document.getElementById('mobileMenu');
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const closeIcon = document.querySelector('.close-icon');
+  const header = document.getElementById('header');
 
   menu.style.display = 'none';
   hamburgerMenu.style.display = 'block';
@@ -36,15 +31,21 @@ function hideMobileMenu() {
   header.style.paddingTop = '40px';
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  var navItems = document.querySelectorAll('.mobile-menu ul li');
-  for (var i = 0; i < navItems.length; i++) {
+function scrollToSection(sectionId) {
+  const section = document.querySelector(sectionId);
+  section.scrollIntoView({ behavior: 'smooth' });
+
+  hideMobileMenu();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navItems = document.querySelectorAll('.mobile-menu ul li');
+  for (let i = 0; i < navItems.length; i += 1) {
     navItems[i].addEventListener('click', function () {
       scrollToSection(this.getAttribute('data-section'));
     });
   }
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const projects = [
@@ -117,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
       <ul class="grid-item2">
-        ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
+        ${project.technologies.map((tech) => `<li>${tech}</li>`).join('')}
       </ul>
       <div class="project-description">${project.description}</div>
     `;
@@ -125,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showProjectPopup(projectId) {
-    const project = projects.find(p => p.id === projectId);
+    const project = projects.find((p) => p.id === projectId);
     const projectDetailsContainer = document.getElementById('project-details');
     projectDetailsContainer.innerHTML = generateProjectDetails(project);
 
@@ -139,9 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const seeProjectButtons = document.querySelectorAll('.see-project-button');
-  seeProjectButtons.forEach(button => {
+  seeProjectButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      const projectId = parseInt(button.dataset.projectId);
+      const projectId = parseInt(button.dataset.projectId, 10);
       showProjectPopup(projectId);
     });
   });
@@ -150,40 +151,40 @@ document.addEventListener('DOMContentLoaded', () => {
   closeButton.addEventListener('click', closePopup);
 });
 
-function getInTouch() {
-  const name = document.getElementById("name").value;
-  const emailInput = document.getElementById("mail");
+document.getElementById('myForm').addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const emailInput = document.getElementById('mail');
   const email = emailInput.value.toLowerCase();
-  const comment = document.getElementById("comment").value;
 
-
-  if (name === "" || email === "" || comment === "") {
-    document.getElementById("errorMessage").innerHTML = "Please fill out all fields.";
-    return;
+  function showError(message) {
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.textContent = message;
   }
 
-  
-  if (email !== emailInput.value.toLowerCase()) {
-    document.getElementById("errorMessage").innerHTML =
-      "Please enter your email address in lowercase letters.";
-    return;
+  function sendFormData() {
+    const form = document.getElementById('myForm');
+    const formData = new FormData(form);
+
+    axios.post('https://formspree.io/f/mzblpang', formData)
+      .then((response) => {
+        if (response.status === 200) {
+          // The form was submitted successfully.
+          document.getElementById('errorMessage').innerHTML = 'Your message has been sent.';
+        } else {
+          // The form was not submitted successfully.
+          document.getElementById('errorMessage').innerHTML = 'Something went wrong. Please try again later.';
+        }
+      })
+      .catch((error) => {
+        // An error occurred.
+        document.getElementById('errorMessage').innerHTML = `Form submission failed: ${error}`;
+      });
   }
 
-  
-  const formData = new FormData(document.getElementById("myForm"));
-  fetch("https://formspree.io/f/mzblpang", {
-    method: "POST",
-    body: formData,
-  })
-    .then(response => {
-      if (response.ok) {
-        document.getElementById("errorMessage").innerHTML = "Your message has been sent.";
-      } else {
-        document.getElementById("errorMessage").innerHTML =
-          "Something went wrong. Please try again later.";
-      }
-    })
-    .catch(error => {
-      document.getElementById("errorMessage").innerHTML = "Form submission failed: " + error;
-    });
-}
+  if (email !== emailInput.value) {
+    showError('Email must be in lowercase.');
+  } else {
+    sendFormData();
+  }
+});
